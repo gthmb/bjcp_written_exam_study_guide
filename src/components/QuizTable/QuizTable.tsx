@@ -17,9 +17,8 @@ const TableWrapper = styled.div`
 
 const StyledTable = styled.table`
     border-collapse: separate;
-    border-spacing: 0.5em 0;
-    padding: 1em 0;
-
+    border-spacing: 0 0;
+    width: 100%;
     td,
     th {
         max-width: 500px;
@@ -33,6 +32,7 @@ const StyledTable = styled.table`
         top: 0;
         background-color: #282c34;
         z-index: 10;
+        border-bottom: 1px dashed hotpink;
     }
 
     th:first-child {
@@ -45,10 +45,15 @@ const StyledTable = styled.table`
 
     td:first-child,
     th:first-child {
+        border-right: 1px dashed hotpink;
         background-color: #282c34;
         left: 0;
         position: sticky;
         z-index: 20;
+    }
+
+    tr > th:first-child {
+        z-index: 100;
     }
 `;
 
@@ -71,7 +76,12 @@ const ViewClassWrapper = styled.div<{ viewclass: ViewClass }>`
 
 const ToggleContainer = styled.td<{ enabled: boolean }>`
     display: ${({ enabled }) => (enabled ? '' : 'none')};
-    border: 1px dashed #555;
+    border: 1px dashed rgba(0, 0, 0, 0);
+
+    :hover {
+        border-color: #555;
+    }
+
     cursor: pointer;
 `;
 

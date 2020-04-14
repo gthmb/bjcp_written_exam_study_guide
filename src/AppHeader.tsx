@@ -1,11 +1,10 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const StyledHeader = styled.div`
     padding: 2em;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dashed #999;
     display: inline-flex;
 `;
 
@@ -13,6 +12,8 @@ const StyleNavLink = styled(NavLink)`
     padding: 1em;
 
     color: white;
+
+    text-decoration: none;
 
     &.active {
         color: hotpink;
