@@ -18,13 +18,13 @@ const TableWrapper = styled.div`
 const StyledTable = styled.table`
     border-collapse: separate;
     border-spacing: 0.5em 0;
-    padding: 2em;
+    padding: 1em 0;
 
     td,
     th {
         max-width: 500px;
         margin-right: 0.5em;
-        min-width: 150px;
+        min-width: 120px;
         padding: 1em;
     }
 
