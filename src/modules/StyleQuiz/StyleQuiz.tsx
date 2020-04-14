@@ -23,7 +23,7 @@ const HideableTableHeader = styled.th<{ enabled: boolean }>`
 `;
 
 const ColumSelector = styled.div`
-    margin: 1em;
+    margin: 1em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

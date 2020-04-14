@@ -5,9 +5,15 @@ enum ViewClass {
     Hidden = 'hidden',
     Visible = 'visible',
     Error = 'error',
+    ErrorHidden = 'error-hidden',
 }
 
-const viewClassOrder = [ViewClass.Hidden, ViewClass.Visible, ViewClass.Error];
+const viewClassOrder = [
+    ViewClass.Hidden,
+    ViewClass.Visible,
+    ViewClass.Error,
+    ViewClass.ErrorHidden,
+];
 
 const TableWrapper = styled.div`
     border: 1px dashed hotpink;
@@ -67,8 +73,16 @@ const ViewClassWrapper = styled.div<{ viewclass: ViewClass }>`
             return `opacity: 1.0`;
         } else if (viewclass === ViewClass.Error) {
             return `
+                user-select: none;
                 visibility: 1.0;
-                background-color: rgba(225, 0, 0, 0.7);
+                background-color: #970000;
+            `;
+        } else if (viewclass === ViewClass.ErrorHidden) {
+            return `
+                user-select: none;
+                visibility: 1.0;
+                color: #970000;
+                background-color: #970000;
             `;
         }
     }}
