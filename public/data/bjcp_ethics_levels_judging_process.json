@@ -1,0 +1,622 @@
+[
+    {
+        "id": 1,
+        "answer": true,
+        "question": "A competition organizer may serve as the judge director and may also serve as a judge, provided this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 2,
+        "answer": true,
+        "question": "A competition’s judge director may serve as a judge, provided this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 3,
+        "answer": true,
+        "question": "A competition organizer may serve as the judge director, provided this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 4,
+        "answer": false,
+        "question": "A competition’s judge director may not serve as a judge, even if this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 5,
+        "answer": false,
+        "question": "A competition organizer may not serve as a judge, even if this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 6,
+        "answer": true,
+        "question": "A competition’s judge director may serve as the competition organizer and may also serve as a judge, provided this person has no knowledge of the association between entries and entrants."
+    },
+    {
+        "id": 7,
+        "answer": true,
+        "question": "An individual with knowledge of the association between entries and entrants may not serve as a judge."
+    },
+    {
+        "id": 8,
+        "answer": false,
+        "question": "A member of the competition staff with access to information that associates entries with entrants may serve as a judge, provided this person does not divulge information about entries and entrants to other judges."
+    },
+    {
+        "id": 9,
+        "answer": true,
+        "question": "The “head” judge at a table should try to tutor apprentice or lower-rank judges if time permits."
+    },
+    {
+        "id": 10,
+        "answer": false,
+        "question": "The steward at the table has sole responsibility for completing the Cover Sheets for beers in each flight."
+    },
+    {
+        "id": 11,
+        "answer": true,
+        "question": "The “head” judge at the table has sole responsibility for completing the Cover Sheets for beers in each flight."
+    },
+    {
+        "id": 12,
+        "answer": true,
+        "question": "The “head” judge at a table should fill out Cover Sheets for beers in his or her flight as directed by the competition management."
+    },
+    {
+        "id": 13,
+        "answer": false,
+        "question": "The “head” judge at a table has no responsibility for filling out Cover Sheets for beers in his or her flight unless directed to do so by the competition management."
+    },
+    {
+        "id": 14,
+        "answer": true,
+        "question": "The “head” judge at the table has sole responsibility for completing the Cover Sheets for beers in each flight but with the agreement of the steward may delegate the completion of the Cover Sheets to the steward."
+    },
+    {
+        "id": 15,
+        "answer": true,
+        "question": "The “head” judge, with the agreement of the steward, may delegate filling in of the Cover Sheets for beers in his or her flight to the steward."
+    },
+    {
+        "id": 16,
+        "answer": false,
+        "question": "There is no need for the “head” judge to complete the Flight Summary Sheet - the competition organizer can obtain all that information from the cover sheets."
+    },
+    {
+        "id": 17,
+        "answer": true,
+        "question": "If possible, there should be at least one BJCP-ranked judge in every flight."
+    },
+    {
+        "id": 18,
+        "answer": true,
+        "question": "When Non-BJCP judges evaluate entries in a competition, each Non-BJCP judge should be paired with a BJCP judge."
+    },
+    {
+        "id": 19,
+        "answer": true,
+        "question": "Non-BJCP judges may only evaluate entries if authorized by the judge director, and Non-BJCP judges should be paired with BJCP judges when possible."
+    },
+    {
+        "id": 20,
+        "answer": true,
+        "question": "To reduce stray odors and flavors present, beverages and foods other than water, bread or crackers should not be brought to the judging table."
+    },
+    {
+        "id": 21,
+        "answer": false,
+        "question": "It is acceptable to bring food items other than bread, crackers, and water to the judging table."
+    },
+    {
+        "id": 22,
+        "answer": false,
+        "question": "You must filter out strong scents from fellow judges or the environment from your mind rather than discussing the problem with the competition organizer."
+    },
+    {
+        "id": 23,
+        "answer": true,
+        "question": "Strong scents from the environment or other judges or stewards should be brought to the attention of the competition organizer."
+    },
+    {
+        "id": 24,
+        "answer": false,
+        "question": "Because entries cannot have any identifying marks, it is OK for a judge to judge beers in a category he or she has entered."
+    },
+    {
+        "id": 25,
+        "answer": true,
+        "question": "If a judge is assigned to judge a category that he/she has entered, that judge should ask the competition organizer to reassign him/her to another category."
+    },
+    {
+        "id": 26,
+        "answer": false,
+        "question": "If a judge is assigned to a category that he or she has entered, the judge should go ahead and evaluate the entries in that category without notifying the judge director or competition organizer."
+    },
+    {
+        "id": 27,
+        "answer": false,
+        "question": "Judges should not review the style being judged from the BJCP Style Guidelines while at the judging table prior to judging that style."
+    },
+    {
+        "id": 28,
+        "answer": true,
+        "question": "Judges may invite stewards to taste the beers in a flight, if there's enough sample to share."
+    },
+    {
+        "id": 29,
+        "answer": true,
+        "question": "It is acceptable to change the order in which you judge the beers on your flight sheet from how it was printed."
+    },
+    {
+        "id": 30,
+        "answer": false,
+        "question": "Beers must be evaluated in the sequence specified on the flight sheet."
+    },
+    {
+        "id": 31,
+        "answer": false,
+        "question": "If you have eaten spicy or greasy food within a few hours prior to judging, you should use mouthwash or antiseptic rinse before judging."
+    },
+    {
+        "id": 32,
+        "answer": true,
+        "question": "You should avoid eating spicy or greasy food within a few hours prior to judging."
+    },
+    {
+        "id": 33,
+        "answer": true,
+        "question": "Spicy or greasy foods should be avoided prior to a judging event because they can reduce a judge's sensitivity to the aromas and flavors of beer."
+    },
+    {
+        "id": 34,
+        "answer": true,
+        "question": "Perfumed shampoos and colognes should be avoided prior to a judging event because they can reduce a judge's sensitivity to the aromas of beer."
+    },
+    {
+        "id": 35,
+        "answer": false,
+        "question": "It is a good idea to take a decongestant prior to a judging event to increase your sensitivity to the aromas of beer."
+    },
+    {
+        "id": 36,
+        "answer": false,
+        "question": "Calibrations beers are selected to be the standard against which entries should be judged."
+    },
+    {
+        "id": 37,
+        "answer": true,
+        "question": "It is the responsibility of the “head” judge, in consultation with the other judges in a flight, to assign a consensus score to each entry."
+    },
+    {
+        "id": 38,
+        "answer": false,
+        "question": "It is not necessary for scores produced by the judges on a panel to be within seven points (or less if directed by the competition director) of each other."
+    },
+    {
+        "id": 39,
+        "answer": true,
+        "question": "After discussing the initial scores, judges should adjust their final scores to be within seven points (or less if directed by the competition director)."
+    },
+    {
+        "id": 40,
+        "answer": true,
+        "question": "Judges must adjust their scores to be within seven points (or less if directed by the competition director) of each other as part of developing a consensus score for the beer."
+    },
+    {
+        "id": 41,
+        "answer": true,
+        "question": "The consensus score assigned to the beer is not necessarily an average score."
+    },
+    {
+        "id": 42,
+        "answer": true,
+        "question": "When judging, It is important to evaluate entries quickly and also complete the score sheets thoroughly and completely.."
+    },
+    {
+        "id": 43,
+        "answer": true,
+        "question": "On average, experienced judges should be able to completely evaluate a beer, including arriving at a consensus, in 10 minutes."
+    },
+    {
+        "id": 44,
+        "answer": false,
+        "question": "When there is a discrepancy in the scores for a given beer, the lower-ranked judges should yield to the opinion of the highest ranked BJCP judge at the table."
+    },
+    {
+        "id": 45,
+        "answer": true,
+        "question": "It is acceptable to remove offensive smelling entries from the judging table after they have been evaluated."
+    },
+    {
+        "id": 46,
+        "answer": false,
+        "question": "A judge must disqualify an entry if the bottle has raised lettering or the cap has identifying marks."
+    },
+    {
+        "id": 47,
+        "answer": false,
+        "question": "A judge may disqualify an entry if it has an improper bottle or cap."
+    },
+    {
+        "id": 48,
+        "answer": true,
+        "question": "Only the judge director or competition organizer can disqualify an entry."
+    },
+    {
+        "id": 49,
+        "answer": true,
+        "question": "The results of the bottle inspection does not affect the scoring."
+    },
+    {
+        "id": 50,
+        "answer": true,
+        "question": "Snide or rude comments are unacceptable on scoresheets."
+    },
+    {
+        "id": 51,
+        "answer": true,
+        "question": "Pour each entry in a manner that gives it its optimum appearance, keeping in mind that some entries may be over- or under-carbonated."
+    },
+    {
+        "id": 52,
+        "answer": false,
+        "question": "When you suspect an entry has been placed in the wrong flight based on the style being judged, you should request that it be judged in a different flight instead."
+    },
+    {
+        "id": 53,
+        "answer": true,
+        "question": "When you suspect an entry has been placed in the wrong flight based on the style being judged, you should consult with the judge director or competition organizer."
+    },
+    {
+        "id": 54,
+        "answer": true,
+        "question": "Sniff the entry immediately after pouring to ensure proper evaluation of volatile aromatics."
+    },
+    {
+        "id": 55,
+        "answer": false,
+        "question": "There is no need to sniff the aroma immediately after pouring the entry into the glass."
+    },
+    {
+        "id": 56,
+        "answer": true,
+        "question": "Judges should complete the evaluation of each entry before moving on to the next."
+    },
+    {
+        "id": 57,
+        "answer": false,
+        "question": "It is not necessary to offer any feedback for improvement if you score a beer above 40."
+    },
+    {
+        "id": 58,
+        "answer": true,
+        "question": "It is common practice to refrain from sharing your thoughts while judging a beer until the other judges have completed their scoresheet."
+    },
+    {
+        "id": 59,
+        "answer": false,
+        "question": "If you are very familiar with a beer style, it is preferable to disregard the BJCP Style Guidelines and rely on your personal expertise instead."
+    },
+    {
+        "id": 60,
+        "answer": false,
+        "question": "If rushed, it's acceptable to write only comments and an overall score on a scoresheet, leaving the scores for the subsections blank."
+    },
+    {
+        "id": 61,
+        "answer": false,
+        "question": "If rushed, it's acceptable to write only 1-2 comments on a scoresheet as long as the numeric score is filled out."
+    },
+    {
+        "id": 62,
+        "answer": false,
+        "question": "If a beer is a “gusher” or has an unpleasant aroma upon opening, a judge may assign a courtesy score of 13 without tasting and commenting on the characteristics of the beer."
+    },
+    {
+        "id": 63,
+        "answer": true,
+        "question": "All beers should be tasted and scored, even if they are “gushers” or have an unpleasant aroma upon opening."
+    },
+    {
+        "id": 64,
+        "answer": false,
+        "question": "It is appropriate to penalize the entrant if the beer is not served at the proper temperature."
+    },
+    {
+        "id": 65,
+        "answer": true,
+        "question": "If the beers are not served at the proper temperature, judges should work with the competition staff to resolve the problem."
+    },
+    {
+        "id": 66,
+        "answer": false,
+        "question": "In each section of a scoresheet, you should only comment upon the most prominent features of each entry, not subtle characteristics."
+    },
+    {
+        "id": 67,
+        "answer": false,
+        "question": "Judges' comments must not include phrases like “if you used ..”"
+    },
+    {
+        "id": 68,
+        "answer": false,
+        "question": "Judges' comments must not include phrases like “did you ..”"
+    },
+    {
+        "id": 69,
+        "answer": true,
+        "question": "Judges' comments must include a complete evaluation of the sensory aspects of the entry and how those aspects relate to the style guidelines."
+    },
+    {
+        "id": 70,
+        "answer": true,
+        "question": "Judges' comments should be constructive and reflect knowledge of the brewing, fermentation, bottling, and handling process."
+    },
+    {
+        "id": 71,
+        "answer": true,
+        "question": "Judges' comments need to provide information on how to improve the entry as warranted."
+    },
+    {
+        "id": 72,
+        "answer": true,
+        "question": "Scores should not be assigned to the aroma section immediately because the entry's aroma profile may change over time."
+    },
+    {
+        "id": 73,
+        "answer": false,
+        "question": "Each section must be scored with a number prior to writing any comments, to best capture your first impressions."
+    },
+    {
+        "id": 74,
+        "answer": false,
+        "question": "To assure objectivity, you should never write your full name or put contact information on the scoresheet."
+    },
+    {
+        "id": 75,
+        "answer": true,
+        "question": "You should write your full name and judging rank on each scoresheet."
+    },
+    {
+        "id": 76,
+        "answer": true,
+        "question": "You should always fill out the “Style Scales” on the scoresheet, as a good check against your scores."
+    },
+    {
+        "id": 77,
+        "answer": false,
+        "question": "You should use the 'Overall Impression' section of the scoresheet to refer to how the entry compares to other entries in the flight."
+    },
+    {
+        "id": 78,
+        "answer": true,
+        "question": "You should use the 'Overall Impression' section of the scoresheet to comment on how much you enjoyed the entry or provide suggestions for how to improve the beer."
+    },
+    {
+        "id": 79,
+        "answer": true,
+        "question": "A score in the 'Outstanding' range is reserved for entries that not only lack flaws but also have the hard-to-define \"extraordinary\" character that great beers have."
+    },
+    {
+        "id": 80,
+        "answer": false,
+        "question": "The courteous lower limit for scores assigned to 'Problematic' beers is 6 points, with one point for each section of the scoresheet."
+    },
+    {
+        "id": 81,
+        "answer": true,
+        "question": "The courteous lower limit for scores assigned to 'Problematic' beers is 13 points."
+    },
+    {
+        "id": 82,
+        "answer": false,
+        "question": "If judges require more pours than one bottle to judge an entry, the “head” judge should ask the steward to request a second bottle from the cellar master."
+    },
+    {
+        "id": 83,
+        "answer": false,
+        "question": "It is preferable to use ink on scoresheets so that your scores and comments cannot be altered by contest personnel."
+    },
+    {
+        "id": 84,
+        "answer": true,
+        "question": "It is preferable to use mechanical pencils, rather than wooden pencils, on scoresheets so that wood odors do not interfere with beer aromas."
+    },
+    {
+        "id": 85,
+        "answer": true,
+        "question": "It is acceptable to request a second bottle to give the entry a fair chance at an accurate judging if a beer is a “gusher” or tastes infected."
+    },
+    {
+        "id": 86,
+        "answer": true,
+        "question": "Entrants may contact the judge, the competition director, or their BJCP Regional Representative if they are dissatisfied with any aspect of their scoresheets."
+    },
+    {
+        "id": 87,
+        "answer": true,
+        "question": "When your flight has finished, you should avoid having conversations that might distract other judges who have not yet finished their flights."
+    },
+    {
+        "id": 88,
+        "answer": false,
+        "question": "When your flight has finished, it is acceptable to visit other flights still in progress to see how beers you have entered are faring."
+    },
+    {
+        "id": 89,
+        "answer": true,
+        "question": "Because it may have been entered by a person in the room, it is polite to refrain from publicly deriding a “problem” beer that you have scored during a competition."
+    },
+    {
+        "id": 90,
+        "answer": true,
+        "question": "Judges from outside the table should not be consulted on a beer unless the judges at the table cannot reach a consensus score, and then only if they all agree to the consultation."
+    },
+    {
+        "id": 91,
+        "answer": false,
+        "question": "BJCP Apprentice judges have not yet taken the BJCP Beer Judging Exam."
+    },
+    {
+        "id": 92,
+        "answer": true,
+        "question": "Novice is not an official BJCP judge rank."
+    },
+    {
+        "id": 93,
+        "answer": true,
+        "question": "One can obtain the BJCP Recognized rank without acquiring judging experience points."
+    },
+    {
+        "id": 94,
+        "answer": true,
+        "question": "One can obtain the BJCP Recognized rank without acquiring non-judging experience points."
+    },
+    {
+        "id": 95,
+        "answer": true,
+        "question": "To become a BJCP Certified judge, it is sufficient to pass the Entrance Exam, score at least 70% on the Beer Judging Exam and earn 5 judging points."
+    },
+    {
+        "id": 96,
+        "answer": false,
+        "question": "To become a BJCP Certified judge, it is sufficient to pass the Entrance Exam, score at least 70% on the Beer Judging Exam and earn 5 experience points."
+    },
+    {
+        "id": 97,
+        "answer": false,
+        "question": "The maximum score on the Beer Judging Exam for the BJCP Certified rank is 79%."
+    },
+    {
+        "id": 98,
+        "answer": false,
+        "question": "To become a BJCP National judge, it is sufficient to score 80% on the Beer Judging Exam and accumulate 20 experience points."
+    },
+    {
+        "id": 99,
+        "answer": false,
+        "question": "To become a BJCP National judge, it is sufficient to score 80% on the Beer Judging Exam and accumulate 20 experience points, with at least half of them from judging."
+    },
+    {
+        "id": 100,
+        "answer": false,
+        "question": "One can obtain the BJCP National rank without acquiring judging experience points."
+    },
+    {
+        "id": 101,
+        "answer": true,
+        "question": "One can obtain the BJCP National rank without acquiring non-judging experience points."
+    },
+    {
+        "id": 102,
+        "answer": false,
+        "question": "BJCP Master judges must have a minimum score of 90% on the combined written and tasting exams and at least 40 judging points."
+    },
+    {
+        "id": 103,
+        "answer": false,
+        "question": "BJCP Master judges must score at least 90% on the combined written and tasting exams and earn at least 50 experience points, with at least half of them from judging."
+    },
+    {
+        "id": 104,
+        "answer": false,
+        "question": "The maximum score on the combined written and tasting exams for the BJCP National rank is 89%."
+    },
+    {
+        "id": 105,
+        "answer": false,
+        "question": "BJCP Master judges must score at least 90% on the combined written and tasting exams and fulfill a Grand Master Service Requirement."
+    },
+    {
+        "id": 106,
+        "answer": false,
+        "question": "BJCP Grand Master judges must score at least 95% on the combined written and tasting exams."
+    },
+    {
+        "id": 107,
+        "answer": true,
+        "question": "BJCP Grand Master judges must score at least 90% on the combined written and tasting exams."
+    },
+    {
+        "id": 108,
+        "answer": true,
+        "question": "Each additional BJCP Grand Master level requires an additional 100 experience points."
+    },
+    {
+        "id": 109,
+        "answer": true,
+        "question": "BJCP Honorary Grand Master judges do not have to take the BJCP exam."
+    },
+    {
+        "id": 110,
+        "answer": false,
+        "question": "The BJCP Honorary Grand Master rank is bestowed upon professional brewers when they judge at homebrew competitions."
+    },
+    {
+        "id": 111,
+        "answer": true,
+        "question": "Honorary Master is a temporary rank bestowed on operatives of the BJCP."
+    },
+    {
+        "id": 112,
+        "answer": true,
+        "question": "The BJCP Grand Master rank requires the same minimum score on the combined written and tasting exams as the Master rank."
+    },
+    {
+        "id": 113,
+        "answer": false,
+        "question": "The BJCP Grand Master rank requires the same minimum experience points as the Master rank."
+    },
+    {
+        "id": 114,
+        "answer": false,
+        "question": "The only difference in requirements between the BJCP Master and Grand Master ranks is that the Grand Master rank requires a GMSR."
+    },
+    {
+        "id": 115,
+        "answer": true,
+        "question": "Each BJCP Grand Master level has additional requirements for exam grading."
+    },
+    {
+        "id": 116,
+        "answer": true,
+        "question": "A BJCP Grand Master Service Requirement can be fulfilled by grading exams."
+    },
+    {
+        "id": 117,
+        "answer": false,
+        "question": "A BJCP Grand Master Service Requirement can be fulfilled by organizing competitions."
+    },
+    {
+        "id": 118,
+        "answer": false,
+        "question": "A BJCP Grand Master Service Requirement can be fulfilled just by serving on the BJCP Board."
+    },
+    {
+        "id": 119,
+        "answer": true,
+        "question": "At least one-half of the experience points required for any BJCP judge rank must be from judging."
+    },
+    {
+        "id": 120,
+        "answer": false,
+        "question": "Judging at homebrew competitions is the only way to earn BJCP judging points."
+    },
+    {
+        "id": 121,
+        "answer": true,
+        "question": "BJCP judges can earn non-judging experience points for participating in BJCP Continuing Education Program activities."
+    },
+    {
+        "id": 122,
+        "answer": true,
+        "question": "Judging experience points can only be earned by judging in a competition or proctoring a BJCP exam."
+    },
+    {
+        "id": 123,
+        "answer": false,
+        "question": "Stewards at homebrew competitions earn BJCP judging points if they taste the beers with the judges."
+    },
+    {
+        "id": 124,
+        "answer": true,
+        "question": "Stewards at homebrew competitions earn BJCP experience points."
+    }
+]

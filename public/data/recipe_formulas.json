@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "answer": "((OG*V/E) - (W1*P1 + W2*P2 ...))/Px",
+        "question": "Pounds of Grain",
+        "note": "E is effiency, W is pounds of grain, P is diastatic power of grain"
+    },
+    {
+        "id": 2,
+        "answer": "(Final + Trub)/.96/.9 + (.133*W) + Equip",
+        "question": "Total Water",
+        "note": "W is pounds of grain"
+    },
+    {
+        "id": 3,
+        "answer": "4.6 + .3(W1*L1 + W2*L2 ...)/V",
+        "question": "SRM > 10",
+        "note": "W is pounds, L is Lovibond"
+    },
+    {
+        "id": 4,
+        "answer": "(W1*L1 + W2*L2 ...)/V",
+        "question": "SRM < 10",
+        "note": "W is pounds of grain, L is Lovibond"
+    },
+    {
+        "id": 5,
+        "answer": "(W * AA * U * 7490)/V",
+        "question": "IBU",
+        "note": "W is ounces of hops, AA is alpha acid of hop, V is volume in gallons"
+    },
+    {
+        "id": 6,
+        "answer": "(IBU * V)/(AA * U * 7490)",
+        "question": "Ounces of hops for addition",
+        "note": "V is volume in gallons, AA is alpha acid of hop, U is utilization"
+    },
+    {
+        "id": 7,
+        "answer": ".2/R * (T2-T1) + T2",
+        "question": "Strike Water Temperature",
+        "note": "T1 is initial temperatture, T2 is target mash temperature, R is quarts of water per pound of grain"
+    },
+    {
+        "id": 8,
+        "answer": "1.5 * W/4",
+        "question": "Strike Water Volume",
+        "note": "W is pounds of grain"
+    },
+    {
+        "id": 9,
+        "answer": ".015 * V * OG",
+        "question": "Liquid Yeast Packs (Lager)",
+        "note": "example OG value: `80` for `1.080`"
+    },
+    {
+        "id": 10,
+        "answer": ".007 * V * OG",
+        "question": "Liquid Yeast Packs (Ale)",
+        "note": "example OG value: `80` for `1.080`"
+    }
+]
