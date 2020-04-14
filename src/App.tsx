@@ -30,7 +30,7 @@ const StyledAppHeader = styled(AppHeader)`
 
 const StyledPageContent = styled.div`
     flex: 1 1 0;
-    height: 0;
+    height: 1;
 `;
 
 const App: React.FunctionComponent<{}> = () => {
