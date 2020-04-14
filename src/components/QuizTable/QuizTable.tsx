@@ -16,15 +16,19 @@ const viewClassOrder = [
 ];
 
 const TableWrapper = styled.div`
-    border: 1px dashed hotpink;
     overflow: scroll;
     height: 100%;
+    width: 100%;
+    position: absolute;
 `;
 
 const StyledTable = styled.table`
     border-collapse: separate;
     border-spacing: 0 0;
     width: 100%;
+    border: 1px dashed hotpink;
+    border-top: none;
+
     td,
     th {
         max-width: 500px;
@@ -38,7 +42,9 @@ const StyledTable = styled.table`
         top: 0;
         background-color: #282c34;
         z-index: 10;
-        border-bottom: 1px dashed hotpink;
+        border: 1px dashed hotpink;
+        border-left: none;
+        border-right: none;
     }
 
     th:first-child {
