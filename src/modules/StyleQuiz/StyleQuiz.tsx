@@ -26,13 +26,13 @@ const ColumSelector = styled.div`
     margin: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     > label {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         align-items: center;
-        padding: 1em;
+        padding-left: 0.1em;
 
         > input {
             margin-right: 0.5em;

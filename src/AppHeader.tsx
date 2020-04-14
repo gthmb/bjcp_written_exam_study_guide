@@ -20,9 +20,9 @@ const StyleNavLink = styled(NavLink)`
     }
 `;
 
-const AppHeader: React.FunctionComponent<RouteComponentProps> = (props) => {
+const AppHeader: React.FunctionComponent<{ className?: string }> = (props) => {
     return (
-        <StyledHeader>
+        <StyledHeader className={props.className}>
             <StyleNavLink to={'./style-quiz'}>Style Quiz</StyleNavLink>
             <StyleNavLink to={'./bjcp-quiz'}>BJCP Quiz</StyleNavLink>
             <StyleNavLink to={'./formula-quiz'}>Recipe Formula Quiz</StyleNavLink>

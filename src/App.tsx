@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { IStyle, IQuestion } from './Styles.interfaces';
 import AppRouter from './AppRouter';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppHeader from './AppHeader';
 
 interface IAppContext {
@@ -20,7 +20,17 @@ export const AppContext = React.createContext<IAppContext>({
 const AppContainer = styled.div`
     min-height: 100vh;
     color: white;
-    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+`;
+
+const StyledAppHeader = styled(AppHeader)`
+    flex: 0 1 auto;
+`;
+
+const StyledPageContent = styled.div`
+    flex: 1 1 0;
+    height: 0;
 `;
 
 const App: React.FunctionComponent<{}> = () => {
@@ -67,8 +77,10 @@ const App: React.FunctionComponent<{}> = () => {
         <AppContext.Provider value={context}>
             <BrowserRouter>
                 <AppContainer>
-                    <Route component={AppHeader} />
-                    <AppRouter />
+                    <StyledAppHeader />
+                    <StyledPageContent>
+                        <AppRouter />
+                    </StyledPageContent>
                 </AppContainer>
             </BrowserRouter>
         </AppContext.Provider>

@@ -7,29 +7,32 @@ enum ViewClass {
     Error = 'error',
 }
 
+const viewClassOrder = [ViewClass.Hidden, ViewClass.Visible, ViewClass.Error];
+
 const TableWrapper = styled.div`
-    display: flex;
-    flex-direction: table-row;
-    justify-content: center;
+    border: 1px dashed hotpink;
+    overflow: scroll;
+    height: 100%;
 `;
 
 const StyledTable = styled.table`
-    padding: 2em;
-    border: 1px dashed hotpink;
     border-collapse: separate;
-    border-spacing: 0 1em;
-
-    width: 100%;
+    border-spacing: 0.5em 0;
+    padding: 2em;
 
     td,
     th {
         max-width: 500px;
+        margin-right: 0.5em;
+        min-width: 150px;
+        padding: 1em;
     }
 
     th {
         position: sticky;
         top: 0;
         background-color: #282c34;
+        z-index: 10;
     }
 
     th:first-child {
@@ -39,9 +42,15 @@ const StyledTable = styled.table`
     td:not(:first-child) {
         text-align: center;
     }
-`;
 
-const viewClassOrder = [ViewClass.Hidden, ViewClass.Visible, ViewClass.Error];
+    td:first-child,
+    th:first-child {
+        background-color: #282c34;
+        left: 0;
+        position: sticky;
+        z-index: 20;
+    }
+`;
 
 const ViewClassWrapper = styled.div<{ viewclass: ViewClass }>`
     padding: 1em;
@@ -64,7 +73,6 @@ const ToggleContainer = styled.td<{ enabled: boolean }>`
     display: ${({ enabled }) => (enabled ? '' : 'none')};
     border: 1px dashed #555;
     cursor: pointer;
-    margin: 15em;
 `;
 
 export const TogglableTableData: React.FunctionComponent<{ enabled?: boolean }> = ({
