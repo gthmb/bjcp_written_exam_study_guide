@@ -6,7 +6,7 @@ import { randomize } from '../../common/methods';
 const BJCPQuiz: React.FunctionComponent<{}> = () => {
     const { bjcpQuestions } = React.useContext(AppContext);
 
-    const randomized = randomize(bjcpQuestions);
+    const randomized = React.useMemo(() => randomize(bjcpQuestions), [bjcpQuestions]);
 
     return (
         <QuizTable>

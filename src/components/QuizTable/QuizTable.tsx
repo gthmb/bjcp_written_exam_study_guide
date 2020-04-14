@@ -16,12 +16,13 @@ const TableWrapper = styled.div`
 const StyledTable = styled.table`
     padding: 2em;
     border: 1px dashed hotpink;
+    border-collapse: separate;
+    border-spacing: 0 1em;
 
     width: 100%;
 
     td,
     th {
-        padding: 1em;
         max-width: 500px;
     }
 
@@ -31,6 +32,10 @@ const StyledTable = styled.table`
         background-color: #282c34;
     }
 
+    th:first-child {
+        text-align: left;
+    }
+
     td:not(:first-child) {
         text-align: center;
     }
@@ -38,11 +43,8 @@ const StyledTable = styled.table`
 
 const viewClassOrder = [ViewClass.Hidden, ViewClass.Visible, ViewClass.Error];
 
-const ViewClassWrapper = styled.td<{ viewclass: ViewClass; enabled: boolean }>`
-    cursor: pointer;
-    user-select: none;
-
-    display: ${({ enabled }) => (enabled ? '' : 'none')};
+const ViewClassWrapper = styled.div<{ viewclass: ViewClass }>`
+    padding: 1em;
 
     ${({ viewclass }) => {
         if (viewclass === ViewClass.Hidden) {
@@ -56,6 +58,13 @@ const ViewClassWrapper = styled.td<{ viewclass: ViewClass; enabled: boolean }>`
             `;
         }
     }}
+`;
+
+const ToggleContainer = styled.td<{ enabled: boolean }>`
+    display: ${({ enabled }) => (enabled ? '' : 'none')};
+    border: 1px dashed #555;
+    cursor: pointer;
+    margin: 15em;
 `;
 
 export const TogglableTableData: React.FunctionComponent<{ enabled?: boolean }> = ({
@@ -73,9 +82,9 @@ export const TogglableTableData: React.FunctionComponent<{ enabled?: boolean }> 
     };
 
     return (
-        <ViewClassWrapper viewclass={viewClass} onClick={handleClick} enabled={isEnabled}>
-            {children}
-        </ViewClassWrapper>
+        <ToggleContainer onClick={handleClick} enabled={isEnabled}>
+            <ViewClassWrapper viewclass={viewClass}>{children}</ViewClassWrapper>
+        </ToggleContainer>
     );
 };
 

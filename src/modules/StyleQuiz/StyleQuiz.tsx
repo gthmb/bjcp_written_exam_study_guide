@@ -43,7 +43,7 @@ const ColumSelector = styled.div`
 const StyleQuiz: React.FunctionComponent<{}> = () => {
     const { styles } = React.useContext(AppContext);
 
-    const randomized = randomize(styles);
+    const randomized = React.useMemo(() => randomize(styles), [styles]);
 
     const [columns, setColumns] = React.useState<IEnabledColumns>({
         CommercialExample: true,

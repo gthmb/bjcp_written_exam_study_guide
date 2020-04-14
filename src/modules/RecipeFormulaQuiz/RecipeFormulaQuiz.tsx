@@ -11,7 +11,7 @@ const Note = styled.div`
 const RecipeFormulaQuiz: React.FunctionComponent<{}> = () => {
     const { formulaQuestions } = React.useContext(AppContext);
 
-    const randomized = randomize(formulaQuestions);
+    const randomized = React.useMemo(() => randomize(formulaQuestions), [formulaQuestions]);
 
     return (
         <QuizTable>
