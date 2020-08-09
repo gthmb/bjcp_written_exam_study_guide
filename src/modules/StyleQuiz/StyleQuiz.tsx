@@ -1,8 +1,9 @@
 import { AppContext } from '../../App';
 import React from 'react';
 import styled from 'styled-components';
-import { TogglableTableData, QuizTable } from '../../components/QuizTable/QuizTable';
+import { QuizTable } from '../../components/QuizTable';
 import { randomize } from '../../common/methods';
+import { TogglableElement } from '../../components/TogglableElement';
 
 enum QuizColumn {
     CommercialExample = 'CommercialExample',
@@ -43,7 +44,13 @@ const ColumSelector = styled.div`
 const StyleQuiz: React.FunctionComponent<{}> = () => {
     const { styles } = React.useContext(AppContext);
 
-    const randomized = React.useMemo(() => randomize(styles), [styles]);
+    const randomized = React.useMemo(
+        () =>
+            randomize(styles).filter(
+                (style) => !(style.sub_style_id === 'C' && style.meta_style.id === 7)
+            ),
+        [styles]
+    );
 
     const [columns, setColumns] = React.useState<IEnabledColumns>({
         CommercialExample: true,
@@ -123,21 +130,21 @@ const StyleQuiz: React.FunctionComponent<{}> = () => {
                                 {style.meta_style.id}
                                 {style.sub_style_id}. {style.name}
                             </td>
-                            <TogglableTableData enabled={columns.CommercialExample}>
+                            <TogglableElement as="td" enabled={columns.CommercialExample}>
                                 {style.commercial_examples.find((ex) => ex.selected)?.name}
-                            </TogglableTableData>
-                            <TogglableTableData enabled={columns.Gravity}>
+                            </TogglableElement>
+                            <TogglableElement as="td" enabled={columns.Gravity}>
                                 {style.og_start} - {style.og_end}
-                            </TogglableTableData>
-                            <TogglableTableData enabled={columns.Gravity}>
+                            </TogglableElement>
+                            <TogglableElement as="td" enabled={columns.Gravity}>
                                 {style.fg_start} - {style.fg_end}
-                            </TogglableTableData>
-                            <TogglableTableData enabled={columns.Color}>
+                            </TogglableElement>
+                            <TogglableElement as="td" enabled={columns.Color}>
                                 {style.srm_start} - {style.srm_end}
-                            </TogglableTableData>
-                            <TogglableTableData enabled={columns.IBUs}>
+                            </TogglableElement>
+                            <TogglableElement as="td" enabled={columns.IBUs}>
                                 {style.ibu_start} - {style.ibu_end}
-                            </TogglableTableData>
+                            </TogglableElement>
                         </tr>
                     ))}
                 </tbody>

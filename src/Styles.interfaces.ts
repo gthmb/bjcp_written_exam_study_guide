@@ -10,6 +10,9 @@ export interface IMetaStyle {
 }
 
 export interface IStyle {
+    impression_description: string;
+    history_description: string;
+    comparison_description: string;
     id: number;
     name: string;
     sub_style_id: string;
@@ -32,4 +35,62 @@ export interface IQuestion<T = any> {
     question: string;
     answer: T;
     note?: string;
+}
+
+interface IGristItem {
+    fermentable: string;
+    lovibond: number;
+    ppg: number;
+    ratio: number;
+    process: string;
+}
+
+export interface IStatefulGristItem extends IGristItem {
+    prettyWeight: number;
+    actualWeight: number;
+    actualRatio: number;
+}
+
+export interface IInferredHopValues {
+    utilization: number;
+    time: number;
+    stage: 'boil' | 'dry-hop';
+}
+export interface IStatefulHopItem extends IHopItem, IInferredHopValues {
+    ibus: number;
+    ounces: number;
+    prettyOunces: number;
+    actualIbus: number;
+}
+
+interface IHopItem {
+    varietal: string;
+    alpha: number;
+    addition_type: string;
+    bittering_ratio: number;
+    ounce_per_5_gallon?: number;
+}
+
+interface IYeastItem {
+    strain: string;
+    type: 'ale' | 'lager';
+}
+
+export interface IStatefulYeastItem extends IYeastItem {
+    billionCells: number;
+    vials: number;
+    prettyVials: number;
+}
+
+export interface IRecipe {
+    id: number;
+    og: number;
+    fg: number;
+    ibu: number;
+    srm: number;
+    beerType: 'ale' | 'lager';
+    style: Pick<IStyle, 'id' | 'sub_style_id' | 'name'>;
+    grist: IGristItem[];
+    hops: IHopItem[];
+    yeast: IYeastItem[];
 }

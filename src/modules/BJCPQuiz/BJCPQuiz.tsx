@@ -1,7 +1,8 @@
 import React from 'react';
 import { AppContext } from '../../App';
-import { QuizTable, TogglableTableData } from '../../components/QuizTable/QuizTable';
+import { QuizTable } from '../../components/QuizTable';
 import { randomize } from '../../common/methods';
+import { TogglableElement } from '../../components/TogglableElement';
 
 const BJCPQuiz: React.FunctionComponent<{}> = () => {
     const { bjcpQuestions } = React.useContext(AppContext);
@@ -20,7 +21,7 @@ const BJCPQuiz: React.FunctionComponent<{}> = () => {
                 {randomized.map(({ id, question, answer }) => (
                     <tr key={id}>
                         <td>{question}</td>
-                        <TogglableTableData>{answer ? 'True' : 'False'}</TogglableTableData>
+                        <TogglableElement as="td">{answer ? 'True' : 'False'}</TogglableElement>
                     </tr>
                 ))}
             </tbody>

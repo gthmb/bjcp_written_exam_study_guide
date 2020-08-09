@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "answer": "((OG*V/E) - (W1*P1 + W2*P2 ...))/Px",
-        "question": "Pounds of Grain",
-        "note": "E is effiency, W is pounds of grain, P is diastatic power of grain"
+        "answer": "(V * OG)/(avgP*E)",
+        "question": "Total Pounds of Grain",
+        "note": "example OG 80 for '1.080', V target volume in gallons, avgP is average PPPG of grist, E is effeciency"
     },
     {
         "id": 2,
@@ -26,7 +26,7 @@
     {
         "id": 5,
         "answer": "(W * AA * U * 7490)/V",
-        "question": "IBU",
+        "question": "IBU for hop by weight/AA",
         "note": "W is ounces of hops, AA is alpha acid of hop, V is volume in gallons"
     },
     {
@@ -57,6 +57,12 @@
         "id": 10,
         "answer": ".007 * V * OG",
         "question": "Liquid Yeast Packs (Ale)",
+        "note": "example OG value: `80` for `1.080`"
+    },
+    {
+        "id": 11,
+        "answer": "(OG - FG) * .132",
+        "question": "ABV",
         "note": "example OG value: `80` for `1.080`"
     }
 ]

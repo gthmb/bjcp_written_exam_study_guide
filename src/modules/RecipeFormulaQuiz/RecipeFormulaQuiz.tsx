@@ -1,12 +1,9 @@
 import React from 'react';
 import { AppContext } from '../../App';
-import { QuizTable, TogglableTableData } from '../../components/QuizTable/QuizTable';
+import { QuizTable } from '../../components/QuizTable';
 import { randomize } from '../../common/methods';
-import styled from 'styled-components';
-
-const Note = styled.div`
-    color: orange;
-`;
+import { TogglableElement } from '../../components/TogglableElement';
+import { Note } from '../../components/ValueRenderers';
 
 const RecipeFormulaQuiz: React.FunctionComponent<{}> = () => {
     const { formulaQuestions } = React.useContext(AppContext);
@@ -25,10 +22,10 @@ const RecipeFormulaQuiz: React.FunctionComponent<{}> = () => {
                 {randomized.map(({ id, question, answer, note }) => (
                     <tr key={id}>
                         <td>{question}</td>
-                        <TogglableTableData>
+                        <TogglableElement as="td">
                             {answer}
-                            <Note>{note}</Note>
-                        </TogglableTableData>
+                            <Note as="div">{note}</Note>
+                        </TogglableElement>
                     </tr>
                 ))}
             </tbody>

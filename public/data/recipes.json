@@ -1,0 +1,631 @@
+[
+    {
+        "id": 1,
+        "og": 1.04,
+        "fg": 1.01,
+        "ibu": 35,
+        "beerType": "ale",
+        "style": {
+            "name": "Irish Stout",
+            "id": 15,
+            "sub_style_id": "B"
+        },
+        "grist": [
+            {
+                "fermentable": "Maris Otter Pale Malt",
+                "lovibond": 3,
+                "ppg": 37,
+                "ratio": 0.65,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Flaked Barley",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 0.23,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Roast Barley",
+                "lovibond": 500,
+                "ppg": 25,
+                "ratio": 0.12,
+                "process": "lauter"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "WLP004 Irish Ale",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "og": 1.05,
+        "fg": 1.012,
+        "ibu": 10,
+        "beerType": "ale",
+        "style": {
+            "name": "Weissbier",
+            "id": 10,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "German Wheat Malt",
+                "lovibond": 1.5,
+                "ppg": 35,
+                "ratio": 0.5,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Floormalted Bohemian Pilsner",
+                "lovibond": 2,
+                "ppg": 37,
+                "ratio": 0.5,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Saaz",
+                "alpha": 3,
+                "addition_type": "bittering",
+                "bittering_ratio": 1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast 2058 (Weihnstephaner)",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "og": 1.08,
+        "fg": 1.012,
+        "ibu": 40,
+        "beerType": "ale",
+        "style": {
+            "name": "Belgian Tripel",
+            "id": 26,
+            "sub_style_id": "C"
+        },
+        "grist": [
+            {
+                "fermentable": "Pilsner Malt",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 0.9,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Candi Sugar",
+                "lovibond": 0,
+                "ppg": 47,
+                "ratio": 0.1,
+                "process": "boil"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Styrian Golding",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "Styrian Golding",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "WLP500 Trappist High Gravity",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "og": 1.06,
+        "fg": 1.016,
+        "ibu": 40,
+        "beerType": "ale",
+        "style": {
+            "name": "American Porter",
+            "id": 20,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "Maris Otter Pale",
+                "lovibond": 3,
+                "ppg": 35,
+                "ratio": 0.9,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Chocolate Malt",
+                "lovibond": 400,
+                "ppg": 30,
+                "ratio": 0.075,
+                "process": "boil"
+            },
+            {
+                "fermentable": "Roasted Barley",
+                "lovibond": 500,
+                "ppg": 30,
+                "ratio": 0.025,
+                "process": "boil"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            },
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "aroma",
+                "bittering_ratio": 0,
+                "ounce_per_5_gallon": 1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast 1056 American Ale",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "og": 1.05,
+        "fg": 1.01,
+        "ibu": 35,
+        "beerType": "ale",
+        "style": {
+            "name": "Strong Bitter",
+            "id": 11,
+            "sub_style_id": "C"
+        },
+        "grist": [
+            {
+                "fermentable": "Maris Otter Pale",
+                "lovibond": 3,
+                "ppg": 35,
+                "ratio": 0.85,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Crystal 20",
+                "lovibond": 20,
+                "ppg": 30,
+                "ratio": 0.15,
+                "process": "boil"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            },
+            {
+                "varietal": "East Kent Golding",
+                "alpha": 5,
+                "addition_type": "aroma",
+                "bittering_ratio": 0,
+                "ounce_per_5_gallon": 1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast 1318 London Ale",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "og": 1.05,
+        "fg": 1.01,
+        "ibu": 35,
+        "beerType": "lager",
+        "style": {
+            "name": "German Pilsner",
+            "id": 5,
+            "sub_style_id": "D"
+        },
+        "grist": [
+            {
+                "fermentable": "Floormalted Bohemian Pilsner",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 1,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Tettnager",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "Tettnager",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            },
+            {
+                "varietal": "Tettnager",
+                "alpha": 5,
+                "addition_type": "aroma",
+                "bittering_ratio": 0,
+                "ounce_per_5_gallon": 1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast Bavarian Pilsner",
+                "type": "lager"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "og": 1.055,
+        "fg": 1.01,
+        "ibu": 35,
+        "beerType": "lager",
+        "style": {
+            "name": "Festbier",
+            "id": 4,
+            "sub_style_id": "B"
+        },
+        "grist": [
+            {
+                "fermentable": "Floormalted Bohemian Pilsner",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 0.8,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Munich",
+                "lovibond": 10,
+                "ppg": 35,
+                "ratio": 0.2,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast Munich Lager",
+                "type": "lager"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "og": 1.055,
+        "fg": 1.01,
+        "ibu": 20,
+        "beerType": "lager",
+        "style": {
+            "name": "Marzen",
+            "id": 6,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "Munich",
+                "lovibond": 10,
+                "ppg": 35,
+                "ratio": 0.7,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Floormalted Bohemian Pilsner",
+                "lovibond": 3,
+                "ppg": 35,
+                "ratio": 0.25,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Caramunich",
+                "lovibond": 60,
+                "ppg": 35,
+                "ratio": 0.05,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast Munich Lager",
+                "type": "lager"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "og": 1.065,
+        "fg": 1.01,
+        "ibu": 60,
+        "beerType": "ale",
+        "style": {
+            "name": "American IPA",
+            "id": 21,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "2 Row",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 0.95,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Crystal 40",
+                "lovibond": 40,
+                "ppg": 35,
+                "ratio": 0.05,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Centennial",
+                "alpha": 10,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.7
+            },
+            {
+                "varietal": "Centennial",
+                "alpha": 10,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.3
+            },
+            {
+                "varietal": "Citra",
+                "alpha": 5,
+                "addition_type": "aroma",
+                "ounce_per_5_gallon": 2
+            },
+            {
+                "varietal": "Mosaic",
+                "alpha": 5,
+                "addition_type": "dry-hop",
+                "ounce_per_5_gallon": 2
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast 1056 American Ale",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "og": 1.08,
+        "fg": 1.01,
+        "ibu": 90,
+        "beerType": "ale",
+        "style": {
+            "name": "Double IPA",
+            "id": 22,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "2 Row",
+                "lovibond": 2,
+                "ppg": 35,
+                "ratio": 0.9,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Cane Sugar",
+                "lovibond": 0,
+                "ppg": 45,
+                "ratio": 0.1,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Centennial",
+                "alpha": 10,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.7
+            },
+            {
+                "varietal": "Centennial",
+                "alpha": 10,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.3
+            },
+            {
+                "varietal": "Citra",
+                "alpha": 5,
+                "addition_type": "aroma",
+                "ounce_per_5_gallon": 2
+            },
+            {
+                "varietal": "Mosaic",
+                "alpha": 5,
+                "addition_type": "dry-hop",
+                "ounce_per_5_gallon": 2
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast 1056 American Ale",
+                "type": "ale"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "og": 1.09,
+        "fg": 1.02,
+        "ibu": 20,
+        "beerType": "ale",
+        "style": {
+            "name": "Doppelbock [Dark]",
+            "id": 9,
+            "sub_style_id": "A"
+        },
+        "grist": [
+            {
+                "fermentable": "Munich",
+                "lovibond": 10,
+                "ppg": 35,
+                "ratio": 0.7,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Veinna",
+                "lovibond": 4,
+                "ppg": 35,
+                "ratio": 0.3,
+                "process": "mash"
+            },
+            {
+                "fermentable": "Carafa 2",
+                "lovibond": 450,
+                "ppg": 30,
+                "ratio": 0.01,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.9
+            },
+            {
+                "varietal": "Hallertauer",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.1
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast Bavarian Lager",
+                "type": "lager"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "og": 1.05,
+        "fg": 1.015,
+        "ibu": 40,
+        "beerType": "lager",
+        "style": {
+            "name": "Czech Premium Pale Lager",
+            "id": 3,
+            "sub_style_id": "B"
+        },
+        "grist": [
+            {
+                "fermentable": "Floormalted Bohemian Pilsner",
+                "lovibond": 3,
+                "ppg": 35,
+                "ratio": 1,
+                "process": "mash"
+            }
+        ],
+        "hops": [
+            {
+                "varietal": "Saaz",
+                "alpha": 5,
+                "addition_type": "bittering",
+                "bittering_ratio": 0.85
+            },
+            {
+                "varietal": "Saaz",
+                "alpha": 5,
+                "addition_type": "flavor",
+                "bittering_ratio": 0.15
+            }
+        ],
+        "yeast": [
+            {
+                "strain": "Wyeast Bohemian Lager",
+                "type": "lager"
+            }
+        ]
+    }
+]

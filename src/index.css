@@ -7,3 +7,12 @@ body {
     background-color: #282c34;
     height: 100%;
 }
+
+body.reveal-all-toggles .toggle-container {
+    opacity: 1 !important;
+    background-color: unset !important;
+}
+
+p {
+    line-height: 1.5em;
+}
