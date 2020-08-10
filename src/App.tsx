@@ -76,7 +76,8 @@ const App: React.FunctionComponent<{}> = () => {
     const fetchRecipes = async () => {
         const data = await fetch('/data/recipes.json');
         const recipes = await data.json();
-        setRecipes(recipes);
+        const sorted = recipes.sort((a: IRecipe, b: IRecipe) => (a.style.id > b.style.id ? 1 : -1));
+        setRecipes(sorted);
     };
 
     useEffect(() => {
