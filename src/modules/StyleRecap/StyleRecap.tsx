@@ -79,7 +79,7 @@ const StyleRecap: React.FunctionComponent<{}> = () => {
         currentTarget: { value },
     }: React.FormEvent<HTMLSelectElement>) => {
         setAnchor(value);
-        window.location.href = `/style-recap/#/${value}`;
+        window.location.href = `/style-recap/#${value}`;
     };
 
     return (
@@ -104,7 +104,7 @@ const StyleRecap: React.FunctionComponent<{}> = () => {
                         checked={enabledSections.impression}
                         readOnly
                     />
-                    Overall Impression
+                    Impression
                 </label>
                 <label>
                     <input
@@ -131,7 +131,7 @@ const StyleRecap: React.FunctionComponent<{}> = () => {
                         odd = style.meta_style.id !== metaId ? !odd : odd;
                         metaId = style.meta_style.id;
 
-                        const id = `/${style.meta_style.id}-${style.sub_style_id}`;
+                        const id = `${style.meta_style.id}-${style.sub_style_id}`;
                         return (
                             <StyleCard key={id} id={id} className={odd ? 'odd' : 'even'}>
                                 <h3>

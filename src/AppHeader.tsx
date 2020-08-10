@@ -1,28 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import { AppContext } from './App';
+import AppMenu from './AppMenu';
 import { StyledControl } from './modules/RecipeQuiz/RecipeQuiz';
 
 const StyledHeader = styled.div`
-    padding: 2em;
+    padding: 1em 0;
     border-bottom: 1px dashed #555;
     display: inline-flex;
-    align-items: center;
     justify-content: space-between;
 `;
 
-const StyleNavLink = styled(NavLink)`
-    padding: 1em;
-
-    color: white;
-
-    text-decoration: none;
-
-    &.active {
-        color: hotpink;
-        border: 1px dashed hotpink;
-    }
+const RightControls = styled.div`
+    margin-top: 4px;
 `;
 
 const AppHeader: React.FunctionComponent<{ className?: string; toggleRevealAll: () => void }> = ({
@@ -33,14 +23,8 @@ const AppHeader: React.FunctionComponent<{ className?: string; toggleRevealAll: 
 
     return (
         <StyledHeader className={className}>
-            <div>
-                <StyleNavLink to={'/style-quiz'}>Style Quiz</StyleNavLink>
-                <StyleNavLink to={'/bjcp-quiz'}>BJCP Quiz</StyleNavLink>
-                <StyleNavLink to={'/formula-quiz'}>Recipe Formula Quiz</StyleNavLink>
-                <StyleNavLink to={'/recipe-quiz'}>Recipe Quiz</StyleNavLink>
-                <StyleNavLink to={'/style-recap'}>Style Recap</StyleNavLink>
-            </div>
-            <div>
+            <AppMenu />
+            <RightControls>
                 <label>
                     Reveal All
                     <StyledControl
@@ -50,7 +34,7 @@ const AppHeader: React.FunctionComponent<{ className?: string; toggleRevealAll: 
                         onChange={toggleRevealAll}
                     ></StyledControl>
                 </label>
-            </div>
+            </RightControls>
         </StyledHeader>
     );
 };
