@@ -18,12 +18,18 @@ interface IRecipeValues {
     prettyAbv: number;
     totalGravityPoints: number;
     totalPoundsGrain: number;
+    prettyTotalPoundsOfGrain: number;
     gristItems: IStatefulGristItem[];
     hopItems: IStatefulHopItem[];
     yeastItems: IStatefulYeastItem[];
     srm: number;
     beerType: string;
     yeastVileFactor: number;
+    mashWaterVolume: number;
+    spargeWaterVolume: number;
+    totalWaterVolume: number;
+    boilTime: number;
+    preboilGallons: number;
 }
 
 interface IRecipeCalculations {
@@ -33,6 +39,9 @@ interface IRecipeCalculations {
         abv: CalculationData;
     };
     yeast: {
+        volumes: CalculationData;
+    };
+    water: {
         volumes: CalculationData;
     };
 }
@@ -45,12 +54,18 @@ const defaultRecipeValues = {
     prettyAbv: 0,
     totalGravityPoints: 0,
     totalPoundsGrain: 0,
+    prettyTotalPoundsOfGrain: 0,
     gristItems: [],
     hopItems: [],
     yeastItems: [],
     srm: 0,
     beerType: 'ale',
     yeastVileFactor: 0.007,
+    mashWaterVolume: 0,
+    spargeWaterVolume: 0,
+    totalWaterVolume: 0,
+    boilTime: 0,
+    preboilGallons: 0,
 };
 
 const Answer = styled.span`
@@ -84,6 +99,8 @@ const getHopUsageDetails = (addition: IStatefulHopItem['addition_type']): IInfer
     return map[addition];
 };
 
+const evaporationRateGPH = 1.5;
+
 export const getRecipeValues = (
     recipe: IRecipe | undefined,
     batchSize: number,
@@ -101,6 +118,20 @@ export const getRecipeValues = (
     const prettyAbv = getSteppedValue(abv, 0.1);
     const totalGravityPoints = recipe ? ogInteger * batchSize : 0;
     const totalPoundsGrain = totalGravityPoints / (averagePPG * efficiency);
+    const boilTime =
+        recipe.grist
+            .filter((gristItem) => gristItem.fermentable.includes('Pilsner'))
+            .map((item) => item.ratio)
+            .reduce((a, b) => a + b, 0) > 0.2
+            ? 90
+            : 60;
+    const preboilGallons = getSteppedValue(batchSize + (boilTime / 60) * evaporationRateGPH);
+    const mashWaterVolume = getSteppedValue((totalPoundsGrain / 4) * 1.5);
+    const spargeWaterVolume = getSteppedValue(
+        preboilGallons - mashWaterVolume + totalPoundsGrain * 0.133
+    );
+    const totalWaterVolume = mashWaterVolume + spargeWaterVolume;
+
     const gristItems = recipe.grist.map((item) => {
         const actualWeight = item.ratio * totalPoundsGrain;
         const prettyWeight = getSteppedValue(actualWeight);
@@ -114,6 +145,10 @@ export const getRecipeValues = (
             actualRatio: prettyWeight / totalPoundsGrain,
         };
     });
+
+    const prettyTotalPoundsOfGrain = gristItems
+        .map((item) => item.prettyWeight)
+        .reduce((a, b) => a + b, 0);
 
     const baseSrm =
         gristItems.map((item) => item.prettyWeight * item.lovibond).reduce((a, b) => a + b) /
@@ -179,12 +214,18 @@ export const getRecipeValues = (
         prettyAbv,
         totalGravityPoints,
         totalPoundsGrain,
+        prettyTotalPoundsOfGrain,
         gristItems,
         hopItems,
         yeastItems,
         beerType,
         yeastVileFactor,
+        mashWaterVolume,
+        spargeWaterVolume,
+        totalWaterVolume,
         srm,
+        boilTime,
+        preboilGallons,
     };
 };
 
@@ -292,7 +333,7 @@ export const getRecipeCalculations = (
         },
     ];
 
-    const yeastVoume = [
+    const yeastVolume = [
         {
             title: `For ${recipeValues.beerType}s, this is formula:`,
             steps: [
@@ -305,6 +346,50 @@ export const getRecipeCalculations = (
         },
     ];
 
+    const waterVolumeCalculations = [
+        {
+            title: 'Find preboil volume',
+            steps: [
+                'batchSize + evaporationRate * boilTimeHours = preboilVolume',
+                <>
+                    {batchSize} + {evaporationRateGPH} * {recipeValues.boilTime / 60} ={' '}
+                    <Answer>{recipeValues.preboilGallons} gallons</Answer>
+                </>,
+            ],
+        },
+        {
+            title: 'Find the mash water volume',
+            steps: [
+                '4 / totalPoundsGrain * quartsPerPound = mashGallons',
+                <>
+                    4 / {recipeValues.prettyTotalPoundsOfGrain} * 1.5 ={' '}
+                    <Answer>{recipeValues.mashWaterVolume} gallons</Answer>
+                </>,
+            ],
+        },
+        {
+            title: 'Find the sparge water volume',
+            steps: [
+                'preboilGallons - mashWaterVolume + (.133 * totalPoundsGrain) = spargeGallons',
+                <>
+                    {recipeValues.preboilGallons} - {recipeValues.mashWaterVolume} + (.133 *{' '}
+                    {recipeValues.prettyTotalPoundsOfGrain}) ={' '}
+                    <Answer>{recipeValues.spargeWaterVolume} gallons</Answer>
+                </>,
+            ],
+        },
+        {
+            title: 'Add mash and sparge for total water',
+            steps: [
+                'mashGallons + spargeGallons = totalGallons',
+                <>
+                    {recipeValues.mashWaterVolume} + {recipeValues.spargeWaterVolume} ={' '}
+                    <Answer>{recipeValues.totalWaterVolume} gallons</Answer>
+                </>,
+            ],
+        },
+    ];
+
     return {
         grist: {
             volumes: gristVolumeCalculations,
@@ -312,7 +397,10 @@ export const getRecipeCalculations = (
             abv: gristABVCalculations,
         },
         yeast: {
-            volumes: yeastVoume,
+            volumes: yeastVolume,
+        },
+        water: {
+            volumes: waterVolumeCalculations,
         },
     };
 };

@@ -178,6 +178,10 @@ const RecipeQuiz: React.FunctionComponent<RouteComponentProps<{ recipeId: string
                     <p>ABV</p>
                     <CalculationList list={recipeCalculations.grist.abv} />
                 </CollapsableContainer>
+                <CollapsableContainer title="Water Calculations" open={false}>
+                    <p>Volumes</p>
+                    <CalculationList list={recipeCalculations.water.volumes} />
+                </CollapsableContainer>
                 <h4>Hops</h4>
                 <StickyTable>
                     <thead>
