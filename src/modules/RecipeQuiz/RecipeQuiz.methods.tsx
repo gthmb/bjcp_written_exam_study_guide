@@ -362,7 +362,7 @@ export const getRecipeCalculations = (
             steps: [
                 'totalPoundsGrain / 4 * quartsPerPound = mashGallons',
                 <>
-                    4 / {recipeValues.prettyTotalPoundsOfGrain} * 1.5 ={' '}
+                    {recipeValues.prettyTotalPoundsOfGrain} / 4 * 1.5 ={' '}
                     <Answer>{recipeValues.mashWaterVolume} gallons</Answer>
                 </>,
             ],
