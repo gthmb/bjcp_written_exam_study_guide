@@ -323,10 +323,10 @@ export const getRecipeCalculations = (
         {
             title: 'Subtract the FG from the OG and multiply by 0.132:',
             steps: [
-                '(OG - FG) * 0.132 = ABV',
+                '(OG - FG) * 0.133 = ABV',
                 <>
                     {' '}
-                    ({recipeValues.ogInteger} - {recipeValues.fgInteger}) * 0.132 ={' '}
+                    ({recipeValues.ogInteger} - {recipeValues.fgInteger}) * 0.133 ={' '}
                     <Answer>{recipeValues.abv.toFixed(1)}%</Answer>
                 </>,
             ],
@@ -360,7 +360,7 @@ export const getRecipeCalculations = (
         {
             title: 'Find the mash water volume',
             steps: [
-                '4 / totalPoundsGrain * quartsPerPound = mashGallons',
+                'totalPoundsGrain / 4 * quartsPerPound = mashGallons',
                 <>
                     4 / {recipeValues.prettyTotalPoundsOfGrain} * 1.5 ={' '}
                     <Answer>{recipeValues.mashWaterVolume} gallons</Answer>
