@@ -126,7 +126,7 @@ const StyleRecap: React.FunctionComponent<{}> = () => {
                 </label>
             </Controls>
             <CardList>
-                {styles?.length &&
+                {styles?.length > 0 &&
                     styles.map((style) => {
                         odd = style.meta_style.id !== metaId ? !odd : odd;
                         metaId = style.meta_style.id;

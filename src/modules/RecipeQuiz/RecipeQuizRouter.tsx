@@ -5,7 +5,7 @@ import RecipeQuiz from './RecipeQuiz';
 const RecipeQuizRouter: React.FunctionComponent<{}> = () => (
     <Switch>
         <Route path="/recipe-quiz/style/:recipeId" exact component={RecipeQuiz} />
-        <Redirect to="/recipe-quiz/style/1" />
+        <Redirect to="/recipe-quiz/style/12" />
     </Switch>
 );
 

@@ -22,6 +22,8 @@ const PaddedContainer = styled.div`
 const RouteLabel = styled(PaddedContainer)`
     color: hotpink;
     border: 1px dashed hotpink;
+    user-select: none;
+    cursor: pointer;
 `;
 
 const StyleNavLink = styled(NavLink)`
@@ -77,7 +79,7 @@ const AppMenu: React.FunctionComponent<{}> = () => {
                 </MenuList>
             )}
             {!menuOpened && (
-                <RouteLabel>
+                <RouteLabel onClick={toggleMenuOpened}>
                     <span>{routeLabel}</span>
                 </RouteLabel>
             )}

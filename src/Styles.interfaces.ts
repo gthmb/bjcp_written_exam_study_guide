@@ -1,3 +1,5 @@
+import { MashProfile, BeerType, YeastType, HopAdditionStage } from './Styles.enums';
+
 export interface ICommercialExample {
     name: string;
     selected: boolean;
@@ -54,7 +56,7 @@ export interface IStatefulGristItem extends IGristItem {
 export interface IInferredHopValues {
     utilization: number;
     time: number;
-    stage: 'boil' | 'dry-hop';
+    stage: HopAdditionStage;
 }
 export interface IStatefulHopItem extends IHopItem, IInferredHopValues {
     ibus: number;
@@ -73,7 +75,7 @@ interface IHopItem {
 
 interface IYeastItem {
     strain: string;
-    type: 'ale' | 'lager';
+    type: YeastType;
 }
 
 export interface IStatefulYeastItem extends IYeastItem {
@@ -88,9 +90,10 @@ export interface IRecipe {
     fg: number;
     ibu: number;
     srm: number;
-    beerType: 'ale' | 'lager';
+    beerType: BeerType;
     style: Pick<IStyle, 'id' | 'sub_style_id' | 'name'>;
     grist: IGristItem[];
     hops: IHopItem[];
     yeast: IYeastItem[];
+    mashProfile: MashProfile;
 }

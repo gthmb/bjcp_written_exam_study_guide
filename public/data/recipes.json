@@ -5,6 +5,7 @@
         "fg": 1.01,
         "ibu": 35,
         "beerType": "ale",
+        "mashProfile": "full-body",
         "style": {
             "name": "Irish Stout",
             "id": 15,
@@ -60,6 +61,7 @@
         "fg": 1.012,
         "ibu": 10,
         "beerType": "ale",
+        "mashProfile": "full-body",
         "style": {
             "name": "Weissbier",
             "id": 10,
@@ -102,6 +104,7 @@
         "fg": 1.012,
         "ibu": 40,
         "beerType": "ale",
+        "mashProfile": "light-body",
         "style": {
             "name": "Belgian Tripel",
             "id": 26,
@@ -150,6 +153,7 @@
         "fg": 1.016,
         "ibu": 40,
         "beerType": "ale",
+        "mashProfile": "full-body",
         "style": {
             "name": "American Porter",
             "id": 20,
@@ -212,6 +216,7 @@
         "fg": 1.01,
         "ibu": 35,
         "beerType": "ale",
+        "mashProfile": "light-body",
         "style": {
             "name": "Strong Bitter",
             "id": 11,
@@ -267,6 +272,7 @@
         "fg": 1.01,
         "ibu": 35,
         "beerType": "lager",
+        "mashProfile": "light-body",
         "style": {
             "name": "German Pilsner",
             "id": 5,
@@ -363,6 +369,7 @@
         "fg": 1.01,
         "ibu": 20,
         "beerType": "lager",
+        "mashProfile": "medium-body",
         "style": {
             "name": "Marzen",
             "id": 6,
@@ -418,6 +425,7 @@
         "fg": 1.01,
         "ibu": 60,
         "beerType": "ale",
+        "mashProfile": "light-body",
         "style": {
             "name": "American IPA",
             "id": 21,
@@ -478,6 +486,7 @@
         "fg": 1.01,
         "ibu": 90,
         "beerType": "ale",
+        "mashProfile": "light-body",
         "style": {
             "name": "Double IPA",
             "id": 22,
@@ -538,6 +547,7 @@
         "fg": 1.02,
         "ibu": 20,
         "beerType": "ale",
+        "mashProfile": "full-body",
         "style": {
             "name": "Doppelbock [Dark]",
             "id": 9,
@@ -593,6 +603,7 @@
         "fg": 1.015,
         "ibu": 40,
         "beerType": "lager",
+        "mashProfile": "medium-body",
         "style": {
             "name": "Czech Premium Pale Lager",
             "id": 3,

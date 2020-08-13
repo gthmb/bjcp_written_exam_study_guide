@@ -9,6 +9,7 @@ import { getSteppedValue } from '../../common/methods';
 import React from 'react';
 import styled from 'styled-components';
 import { CalculationData } from './CalculationList';
+import { HopAdditionStage, MashProfile } from '../../Styles.enums';
 
 interface IRecipeValues {
     averagePPG: number;
@@ -30,6 +31,8 @@ interface IRecipeValues {
     totalWaterVolume: number;
     boilTime: number;
     preboilGallons: number;
+    mashTemp: number;
+    strikeTemp: number;
 }
 
 interface IRecipeCalculations {
@@ -43,6 +46,10 @@ interface IRecipeCalculations {
     };
     water: {
         volumes: CalculationData;
+    };
+    mash: {
+        strike: CalculationData;
+        mashout: CalculationData;
     };
 }
 
@@ -66,6 +73,8 @@ const defaultRecipeValues = {
     totalWaterVolume: 0,
     boilTime: 0,
     preboilGallons: 0,
+    mashTemp: 0,
+    strikeTemp: 0,
 };
 
 const Answer = styled.span`
@@ -78,28 +87,37 @@ const getHopUsageDetails = (addition: IStatefulHopItem['addition_type']): IInfer
         bittering: {
             utilization: 0.25,
             time: 60,
-            stage: 'boil',
+            stage: HopAdditionStage.Boil,
         },
         flavor: {
             utilization: 0.1,
             time: 10,
-            stage: 'boil',
+            stage: HopAdditionStage.Boil,
         },
         aroma: {
             utilization: 0.0001,
             time: 0,
-            stage: 'boil',
+            stage: HopAdditionStage.Boil,
         },
         'dry-hop': {
             utilization: 0.0001,
             time: 2,
-            stage: 'dry-hop',
+            stage: HopAdditionStage.DryHop,
         },
     };
     return map[addition];
 };
 
+const getMashDetails = (profile: MashProfile) => {
+    return {
+        [MashProfile.FullBody]: 155,
+        [MashProfile.MediumBody]: 151,
+        [MashProfile.LightBody]: 148,
+    }[profile];
+};
+
 const evaporationRateGPH = 1.5;
+const roomTemperature = 70;
 
 export const getRecipeValues = (
     recipe: IRecipe | undefined,
@@ -206,6 +224,10 @@ export const getRecipeValues = (
             billionCells: getSteppedValue(item.vials * 100),
         }));
 
+    const mashTemp = getMashDetails(recipe.mashProfile);
+
+    const strikeTemp = Math.round(0.133 * (mashTemp - roomTemperature) + mashTemp);
+
     return {
         averagePPG,
         ogInteger,
@@ -226,6 +248,8 @@ export const getRecipeValues = (
         srm,
         boilTime,
         preboilGallons,
+        mashTemp,
+        strikeTemp,
     };
 };
 
@@ -390,6 +414,26 @@ export const getRecipeCalculations = (
         },
     ];
 
+    const mashStrikeCalculations = [
+        {
+            title: 'Find the strike water temperature',
+            steps: [
+                '.133 * (mashTemp - roomTemperature) + mashTemp = strikeTemperature',
+                <>
+                    .133 * ({recipeValues.mashTemp} - {roomTemperature}) + {recipeValues.mashTemp} ={' '}
+                    <Answer>{recipeValues.strikeTemp}°F</Answer>
+                </>,
+            ],
+        },
+    ];
+
+    const mashMashoutCalculations = [
+        {
+            title: '',
+            steps: [],
+        },
+    ];
+
     return {
         grist: {
             volumes: gristVolumeCalculations,
@@ -401,6 +445,10 @@ export const getRecipeCalculations = (
         },
         water: {
             volumes: waterVolumeCalculations,
+        },
+        mash: {
+            strike: mashStrikeCalculations,
+            mashout: mashMashoutCalculations,
         },
     };
 };

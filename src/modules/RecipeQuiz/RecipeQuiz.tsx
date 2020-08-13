@@ -38,8 +38,6 @@ export const StyledControl = styled.select`
 `;
 
 const RecipeQuiz: React.FunctionComponent<RouteComponentProps<{ recipeId: string }>> = (props) => {
-    console.log(props);
-
     const { recipes, styles } = React.useContext(AppContext);
 
     const [recipeId] = React.useState(Number(props.match.params.recipeId));
@@ -181,6 +179,10 @@ const RecipeQuiz: React.FunctionComponent<RouteComponentProps<{ recipeId: string
                 <CollapsableContainer title="Water Calculations" open={false}>
                     <p>Volumes</p>
                     <CalculationList list={recipeCalculations.water.volumes} />
+                </CollapsableContainer>
+                <CollapsableContainer title="Mash Calculations" open={false}>
+                    <p>Strike Temperature</p>
+                    <CalculationList list={recipeCalculations.mash.strike} />
                 </CollapsableContainer>
                 <h4>Hops</h4>
                 <StickyTable>
