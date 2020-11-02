@@ -1,68 +1,33 @@
+# BJCP Written Study Guide
+
+This site is meant to help those studying for the BJCP Written exam. A labor of love for my fellow judges trying to rank up!
+
+In each section of the site, there are tables of data with empty cells. These cells can be clicked on to reveal the 'answer'. They can be clicked again to turn them red to indicate you answered incorrectly, clicked a second time to maintain the error state but hide the answer, and clicked again to show the initial empty state. It is meant to be used like flash-cards.
+
+Visit the site: https://judgewell.io
+
+# Sections
+
+## Style Quiz
+
+A table of the styles for which a judge will need to know a commercial example of. Optionally, the Gravity, Color, and IBU columns can be enabled. A random set of 6 of these will be on the exam.
+
+## BJCP Quiz
+
+A table of the True/False question pool that a judge should be able to answer. A random set of 20 of these will be on the exam.
+
+## Recipe Formula Quiz
+
+These are the formulas I find useful when having to 'show the math' in the recipe on the exam.
+
+## Recipe Quiz
+
+There is a select control to choose one of the possible recipes you will be asked to provide on the exam. These recipes are my own. You can reveal the description of the style and the target parameters. Also, the grist, hop bill, water and yeast. Calculation sections can be expanded to see how the values were arrived at.
+
+## Style Recap
+
+Displays the BJCP beer styles' name and stats. Also can toggle on/off the Impression, History, and Comparison sections.
+
+# Notes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
